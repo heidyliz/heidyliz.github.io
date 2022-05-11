@@ -1,0 +1,549 @@
+/*CODIGO COLORES*/
+:root{
+    --rojovino: #611919;
+    --claro: #963a3a;
+    --amarillo: #c8753d;
+    --claroA: #e5a057;
+    --variación-amarrillo: #e87324;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #eee;
+    --main-color:#443;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+    --border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover:4% 95% 6% 95%/95% 4% 92% 5%;
+    --border:.2rem solid var(--main-color);
+    --border-hover:.2rem dashed var(--main-color);
+
+}
+/*CODIGO GENERAL PAGINA*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0.5rem;
+}
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 1rem;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #eee;
+}
+body{
+    background: #eee;
+}
+/*ESTILOS DEL MINI MENU */
+.sub-menu{
+    position: fixed;
+    background: #000;
+    height: 33px;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 9%;
+}
+.envio{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+ 
+}
+.envio a{
+    color: #e5a057;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-decoration: underline;
+}
+/*ESTILOS DEL MENU PRINCIPAL*/
+.header{
+    position: fixed;
+    top: 33px;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #ffffff;
+    box-shadow: 0px 0px 9px 1px #0000004d;
+}
+.header .logo img{
+    width: 90px;
+}
+.navbar{
+    margin-left: 30rem;
+}
+.header .navbar a{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: #000108;
+    font-family: 'Roboto', sans-serif;
+}
+.header .navbar a:hover{
+    color: #c8753d;
+}
+.header .icons{
+    margin-right: 1rem;
+}
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: #000108;
+    font-size: 2rem;
+    margin-right: .2rem;
+    cursor: pointer;
+    text-align: center;
+}
+.icons1{
+    margin-right: 1rem;
+}
+.header .icons1 a{
+    padding: 1rem 1rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #c8753d;
+    color: #fff;
+    font-size: 2rem;
+    margin-right: .2rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .icons div:hover{
+    background: #c8753d;
+    color: #ffffff;
+}
+#menu-btn{
+    display: none;
+}
+/*ESTILOS PORTADA*/
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/portadaInicio.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 48rem;
+    padding-bottom: 9rem;
+}
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+.home .content h3{
+    letter-spacing: 4px;
+    font-family: 'Bebas Neue', cursive;
+    color: #000000;
+    font-size: 6rem;
+    text-transform: none;
+}
+.home .content h3 span{
+    letter-spacing: 4px;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    color: #e87324;
+}
+.home .content p{
+    color: #000000;
+    font-size: 2.2rem;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+}
+/*ESTILOS SECCION HISTORIA*/
+.about .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.about .row .image{
+    flex:1 1 30rem;
+}
+
+.about .row .image img{
+    width: 60%;
+    margin-left: 10rem;
+    animation:aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+    0%, 100%{
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50%{
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+.about .row .content{
+    flex:1 1 30rem;
+    margin-right: 20rem;
+}
+
+.about .row .content .title{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    color: #000000;
+    font-size: 5rem;
+    line-height: 1.8;
+}
+
+.about .row .content p{
+    color: #000000;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    padding:1rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*ESTILOS DEL CARRUSEL*/
+#section-1{
+    background: #e5a057;
+}
+h4, h1,small,a{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+}
+.Carousel{
+    width: 100%;
+    margin: 0px 2px;
+}
+.Carousel h1{
+    margin-bottom: 1px;
+    font-size: 45px;
+    line-height: 38px;
+    padding-bottom: 24px;
+    opacity: .9;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 20px;
+    color: #000000;
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* IMG DEL CARRUSEL */
+
+.slick-list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 390px;
+    padding: 10px 0px;
+    margin: 0px auto;
+    max-width: 90vw;
+    overflow: hidden;
+}
+.slick-track{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-in-out;
+}
+.slick{
+    position: relative;
+    width: 275px;
+    padding: 0 18px;
+    float: left;
+    box-sizing: border-box;
+    display: flex;
+    height: 100%;
+    margin-bottom: 60px;
+}
+.slick h4{
+    position: absolute;
+    z-index: 1;
+    font-size: 26px;
+    line-height: 23px;
+    background: #000000c4;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 250px;
+    padding: 15px;
+    top: 245px;
+}
+.slick h4 small{
+    font-size: 25px;
+    float: right;
+    display: block;
+}
+.slick img{
+   
+    height: 330px;
+    width: 250px;
+ 
+}
+.slick a img:hover{
+    opacity: .85;
+}
+.slick h4:hover{
+    background: #ffffffc9;
+    color: #000000;
+}
+
+/* BOTONES PARA DESLIZAR EN EL CARRUSEL */
+
+.slick-arrow{
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+    border: 0;
+    cursor: pointer;
+}
+.slick-arrow:focus{
+    outline: 0;
+}
+.slick-arrow svg{
+    width: 12px;
+    height: 100%;
+    color: rgb(0, 0, 0);
+}
+.slick-prev{
+    left: 0px;
+}
+.slick-next{
+    right: 0px;
+}
+/* ESTILO DE LA SECCION DE OFERTAS */
+
+.home-ofer .slide{
+    background: transparent;
+    top: 3.6rem;
+}
+
+.home-ofer .swiper-button-next {
+    color: #e5a057;
+    margin-right: 2rem;
+}
+
+.home-ofer .swiper-button-prev {
+    color: #e5a057;
+    margin-left: 2rem;
+}
+
+.home-ofer .image{
+    flex: 1 1 42rem;
+}
+.home-ofer img{
+    height: 50rem;
+    width: 100%;
+}
+.home-ofer .image a{
+    position: absolute;
+    font-size: 3rem;
+    color: #000;
+    background: #fff;
+    border-radius: 0.6rem;
+    margin-top: -15rem;
+    margin-left: 45%;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+/*CONTACTO*/
+.headingi {
+    margin-left: 10rem;
+    color:#c8753d;
+    display: inline-block;
+    padding: 10rem 2rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6rem;
+}
+hr{
+    display: block;
+  margin-top: -10rem;
+  margin-bottom: 8rem;
+  margin-left: 12rem;
+  margin-right: 100rem;
+  border-style: inset;
+  border-width: 1px;
+  color: #868686;
+}
+.contacto{
+    margin-top: -5rem;
+}
+.contacto p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-left: 12rem;
+    color: #000;
+}
+.contacto iframe{
+    margin-left: 12rem;
+    width: 28%;
+}
+.cell img{
+    margin-left: 50rem;
+    margin-top: -81rem;
+    width: 805px;
+}
+/*Footer - pie de pagina*/
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: #000000;
+    margin-top: 40px;
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img{
+    width: 100px;
+}
+
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #e5a057;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #ffffff;
+}
+
+footer .redes-footer .fa-facebook-f:hover{
+    cursor: pointer;
+}
+
+footer .redes-footer .fa-google-plus-g:hover{
+    cursor: pointer;
+}
+
+footer .redes-footer .fa-instagram:hover{
+    cursor: pointer;
+}
+
+
+.container-footer h4{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+
+}
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:110%; right:-110%;
+        width:30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+    }
+
+    .header .navbar.active{
+        right:2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin:2rem 2.5rem;
+        display: block;
+    }
+
+}
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+}

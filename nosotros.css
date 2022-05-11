@@ -1,0 +1,519 @@
+/*CODIGO COLORES*/
+
+:root {
+    --rojovino: #611919;
+    --claro: #963a3a;
+    --amarillo: #c8753d;
+    --claroA: #e5a057;
+    --variación-amarrillo: #e87324;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #eee;
+    --main-color: #443;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --outline: .1rem solid rgba(0, 0, 0, .1);
+    --outline-hover: .2rem solid var(--black);
+    --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+
+/*CODIGO GENERAL PAGINA*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 0.5rem;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+
+body {
+    background: #eee;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*ESTILOS DEL MINI MENU */
+
+.sub-menu {
+    position: fixed;
+    background: #000;
+    height: 33px;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 9%;
+}
+
+.envio {
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+.envio a {
+    color: #e5a057;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+
+/*ESTILOS DEL MENU PRINCIPAL*/
+
+.header{
+    position: fixed;
+    top: 33px;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #ffffff;
+    box-shadow: 0px 0px 9px 1px #0000004d;
+}
+.header .logo img{
+    width: 90px;
+}
+.navbar{
+    margin-left: 30rem;
+}
+.header .navbar a{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: #000108;
+    font-family: 'Roboto', sans-serif;
+}
+.header .navbar a:hover{
+    color: #c8753d;
+}
+.header .icons{
+    margin-right: 1rem;
+}
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color: #000108;
+    font-size: 2rem;
+    margin-right: .2rem;
+    cursor: pointer;
+    text-align: center;
+}
+.icons1{
+    margin-right: 1rem;
+}
+.header .icons1 a{
+    padding: 1rem 1rem;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #c8753d;
+    color: #fff;
+    font-size: 2rem;
+    margin-right: .2rem;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .icons div:hover{
+    background: #c8753d;
+    color: #ffffff;
+}
+.ofertas {
+    padding: 4rem;
+    background: #c8753d;
+    width: 100%;
+    height: 10%;
+    padding-bottom: 1rem;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.ofertas h3 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 4rem;
+    margin-top: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.3rem;
+    color: #fff;
+}
+
+.ofertas a {
+    font-size: 2.2rem;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.ofertas p {
+    font-size: 2.2rem;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+
+/*ESTILOS SECCION HISTORIA*/
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .image {
+    flex: 1 1 30rem;
+}
+
+.about .row .image img {
+    width: 60%;
+    margin-left: 10rem;
+    animation: aboutImage 4s linear infinite;
+}
+
+@keyframes aboutImage {
+    0%,
+    100% {
+        transform: scale(.9);
+        border-radius: var(--border-radius-hover);
+    }
+    50% {
+        transform: scale(.8);
+        border-radius: var(--border-radius);
+    }
+}
+
+.about .row .content {
+    flex: 1 1 30rem;
+    margin-right: 20rem;
+}
+
+.about .row .content .title {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+    color: #000000;
+    font-size: 5rem;
+    line-height: 1.8;
+}
+
+.about .row .content p {
+    color: #000000;
+    font-size: 1.9rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*MISION, VISION, VALORES*/
+
+.todo {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: -11rem;
+    /* margin-left: 3rem;  */
+    /* justify-content: center;
+    align-items: center; */
+    /* display: flex;
+    flex-flow: row;
+    margin: 5px 0; */
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    margin: 0 auto;
+}
+
+.card {
+    background: #000;
+    width: 95%;
+    height: 70rem;
+    /* margin-top: 5rem;
+    margin-left: 10rem; */
+    /* margin: 5rem 5rem 10rem 5rem; */
+    /* margin-bottom: 8rem; */
+    padding: 5rem 0;
+}
+
+
+/*.card */
+
+i {
+    padding: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: #c8753d;
+    border-radius: 10rem;
+    margin-top: -6rem;
+    margin-left: 38%;
+}
+
+.mvv {
+    margin-top: 5rem;
+    text-align: center;
+    padding: 2px 16px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.mvv h4 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.mvv p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*CONTACTO*/
+
+.headingi {
+    margin-left: 10rem;
+    color: #c8753d;
+    display: inline-block;
+    padding: 10rem 2rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6rem;
+}
+
+hr {
+    display: block;
+    margin-top: -10rem;
+    margin-bottom: 8rem;
+    margin-left: 12rem;
+    margin-right: 100rem;
+    border-style: inset;
+    border-width: 1px;
+    color: #868686;
+}
+
+.contacto {
+    margin-top: -5rem;
+}
+
+.contacto p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-left: 12rem;
+    color: #000;
+}
+
+.contacto iframe {
+    margin-left: 12rem;
+    width: 28%;
+}
+
+.cell img {
+    margin-left: 50rem;
+    margin-top: -81rem;
+    width: 805px;
+}
+
+
+/*Footer - pie de pagina*/
+
+.container-footer {
+    width: 100%;
+    padding: 40px 0;
+    background: #000000;
+    margin-top: 40px;
+}
+
+.container-footer footer {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer {
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img {
+    width: 100px;
+}
+
+.container-footer footer .redes-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container-footer footer .redes-footer .icon-redes-footer {
+    font-size: 20px;
+    margin: 20px;
+    background: #e5a057;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #ffffff;
+}
+
+footer .redes-footer .fa-facebook-f:hover {
+    cursor: pointer;
+}
+
+footer .redes-footer .fa-google-plus-g:hover {
+    cursor: pointer;
+}
+
+footer .redes-footer .fa-instagram:hover {
+    cursor: pointer;
+}
+
+.container-footer h4 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+@media (max-width:850px) {
+    .todo {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .card {
+        height: 55rem;
+    }
+    .card {
+        padding-top: 2.5rem;
+    }
+    .valores {
+        margin-top: 5rem;
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    i {
+        margin: 0;
+    }
+    .icono {
+        display: flex;
+        justify-content: center;
+    }
+    .ofertas p {
+        font-size: 1.6rem;
+    }
+    .mvv {
+        margin-top: 1rem;
+    }
+    .content {
+        margin: 0 !important;
+        padding: auto;
+    }
+    /**** Contacto ****/
+    .contenedor-contacto {
+        display: flex;
+    }
+    .headingi {
+        margin: 0;
+        padding-top: 2rem;
+        font-size: 4.5rem;
+    }
+    .contacto p {
+        font-size: 2.3rem;
+        margin-left: 2rem;
+        color: #000;
+    }
+    .contacto iframe {
+        margin-left: 2rem;
+        margin: 0 2rem 0 2rem;
+        width: 55rem;
+    }
+    .contacto {
+        width: 100%;
+    }
+    .ubicacion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cell img {
+        margin-left: -80rem;
+        margin-top: 10rem;
+        width: 40rem;
+    }
+    iframe {
+        margin-left: -50rem !important;
+        width: 90rem !important;
+    }
+}
+
+@media (max-width:675px) {
+    .todo {
+        display: flex;
+        flex-direction: column;
+        align-items: center !important;
+    }
+    .card {
+        margin-top: 2rem;
+        max-width: 120rem;
+    }
+    .mision .vision .valores {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .valores {
+        margin-top: 0 !important;
+        width: 100% !important;
+    }
+    .ofertas p {
+        font-size: 1.6rem;
+    }
+}
